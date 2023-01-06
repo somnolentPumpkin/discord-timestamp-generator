@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discord Timestamp Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Discord Timestamp Generator</h1>
+  <div id="instructions">
+      <p>Instructions:</p>
+      <ol>
+        <li>Fill out the date and time. <strong>Note:</strong> The time uses the 24-hour format, so "1:00pm" would be "13", etc.</li>
+        <li>Click <strong>Generate</strong>.</li>
+        <li>Paste the resulting timestamp code into the Discord chat.</li>
+      </ol>
+  </div>
+  <form id="timestamp-form">
+    <p><label for="year">Year:</label></p>
+    <p><input type="number" id="year" name="year" value="2023"></p>
+    <p><label for="month">Month:</label></p>
+    <p><input type="number" id="month" name="month" value="1"></p>
+    <p><label for="day">Day:</label></p>
+    <p><input type="number" id="day" name="day" value="1"></p>
+    <p><label for="hour">Hour:</label></p>
+    <p><input type="number" id="hour" name="hour" value="0"></p>
+    <p><label for="minute">Minute:</label></p>
+    <p><input type="number" id="minute" name="minute" value="0"></p>
+    <p><label for="second">Second:</label></p>
+    <p><input type="number" id="second" name="second" value="0"></p>
+    <p><button type="submit">Convert</button>
+  </form>
+  <p><pre id="result"><p id="result-timestamp"></p></pre></p>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
