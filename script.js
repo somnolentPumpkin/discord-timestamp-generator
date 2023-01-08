@@ -1,16 +1,16 @@
+const defaultDate = new Date()
+const defaultTime = defaultDate.toLocaleTimeString([], {hourCycle: 'h23', hour: '2-digit', minute: '2-digit'})
+document.querySelector('#time').value = defaultTime
+document.querySelector('#date').valueAsDate = defaultDate
+
 const form = document.querySelector('#timestamp-form');
 form.addEventListener('submit', e => {
   e.preventDefault();
-  const year = document.querySelector('#year').value;
-  const month = document.querySelector('#month').value;
-  const day = document.querySelector('#day').value;
-  const hour = document.querySelector('#hour').value;
-  const minute = document.querySelector('#minute').value;
-  const second = document.querySelector('#second').value;
+  const selectedDate = document.querySelector('#date').value;
+  const selectedTime = document.querySelector('#time').value;
 
-
-  const date = new Date(year, month-1, day, hour, minute, second);
-  const timestamp = date.getTime() / 1000;
+  const newDate = new Date(`${selectedDate} ${selectedTime}`);
+  const timestamp = newDate.getTime() / 1000;
   document.querySelector('#result-timestamp').textContent = `<t:${timestamp}>`
   document.querySelector('#result-timestamp').style.display = "block"
   copyToClipboard(`<t:${timestamp}>`)
