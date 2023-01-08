@@ -56,7 +56,8 @@ body {
     font-weight: bold;
   }
   
-  input[type="number"] {
+
+  input[type="date"],  input[type="time"] {
     width: 50%;
     height: 32px;
     padding: 5px 10px;
